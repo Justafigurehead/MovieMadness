@@ -13,6 +13,20 @@ class NetflixContainer extends React.Component{
     };
   }
 
+  componentDidMount(){
+    const url="http://netflixroulette.net/api/api.php?actor=" + this.state.userChoice;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onload = () =>{
+      if (xhr.status === 200){
+      this.setState({
+        films: JSON.parse(xhr.responseText)
+      });
+      }
+    }
+    xhr.send();
+  }
+
   componentWillUpdate(){
     const url="http://netflixroulette.net/api/api.php?actor=" + this.state.userChoice;
     const xhr = new XMLHttpRequest();
@@ -41,9 +55,8 @@ class NetflixContainer extends React.Component{
 
   render(){
     return (
-      <div>
+      <div id="netflix-container">
         <h2>Netflix Roulette</h2>
-
         <ActorSearch userInput={(userInput) => {this.setUserChoice(userInput)}}/>
         <NetflixSelector 
           actor= {this.state.userChoice}

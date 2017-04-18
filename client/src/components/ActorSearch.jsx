@@ -19,6 +19,7 @@ class ActorSearch extends React.Component{
   render(){
     return(
       <input 
+        id="actor-search"
         placeholder="Enter an Actor..." 
         type="text"
         onKeyUp={(event) => {this.handleInput(event)}}

@@ -9,8 +9,8 @@ class FilmDetail extends React.Component{
     }
 
     return(
-      <div>
-        <h3>You picked: {this.props.film.show_title} (<em>{this.props.film.release_year}</em>)</h3>
+      <div id="film-details">
+        <h3>You picked: {this.props.film.show_title} <em>({this.props.film.release_year})</em></h3>
         <ul>
           <li>Director: {this.props.film.director}</li>
           <li>Cast: {this.props.film.show_cast}</li>

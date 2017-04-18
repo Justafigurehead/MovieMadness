@@ -18,10 +18,12 @@ class NetflixSelector extends React.Component{
       return <option value={index} key={index}>{film.show_title}</option>
     })
     return(
-        <select onChange={(event) =>{this.handleChange(event)}}>
-          <option>pick a film with {this.props.actor}</option>
-          {filmOptions}
-        </select>
+        <div id="netflix-selector">
+          <select onChange={(event) =>{this.handleChange(event)}}>
+            <option>pick a film with {this.props.actor}</option>
+            {filmOptions}
+          </select>
+        </div>
       )
   }
 }

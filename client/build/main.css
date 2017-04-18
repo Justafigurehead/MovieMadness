@@ -1,0 +1,43 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  background: #b9090b;
+}
+
+body{
+  margin: 0;
+}
+
+/*Netflix Container and elements*/
+
+#netflix-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+
+#netflix-container h2 {
+  font-family: 'Press Start 2P', sans-serif;
+  text-align: center;
+  font-size: 4.5em;
+  color: white;
+  padding: 20px;
+  text-shadow: 10px 10px 10px black;
+  letter-spacing: 1;
+}
+
+#film-details{
+  border: 1px solid black;
+  font-family: 'heebo';
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#film-details ul{
+  color: white;
+  font-family: 'roboto';
+}
+
